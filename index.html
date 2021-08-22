@@ -4,38 +4,64 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        form{
+            padding: 20px;
+            border: solid 1px black;
+            width:50%;
+            border-radius:10px;
+        }
+        input, textarea, select{
+            margin:5px;
+            padding:5px;
+            border: solid 2px green;
+            border-radius:5px;
+        }
+        label{
+            color: green;
+        }
+        body{
+            background-color:pink
+        }
+        
+    </style>
 </head>
 <body>
     <h1 id="title">Survey Form</h1>
     <p id="description">This is a Survey Form</p>
     <form id="survey-form">
-        <label id="name-label" for="name">Name</label>
-        <input id="name" type="text" name="name" required placeholder="Enter your name"><br />
-        <label id="email-label" for="email">Email</label>
-        <input id="email" type="email" name="email" required placeholder="Enter your email"><br />
-        <label id="number-label" for="number">Number</label>
-        <input id="number" type="number" name="number" min="1" max="10" required placeholder="Enter your number"><br />
-        <select id="dropdown">
-            <option selected disabled> country</option>
-            <option> Egypt</option>
-            <option> Nigeria</option>
+        <div id="personalData">
+            <h3>Personal Data</h3>
+            <label id="name-label" for="name">Name</label>
+            <input id="name" type="text" name="name" required placeholder="Enter your name"><br />
+            <label id="email-label" for="email">Email</label>
+            <input id="email" type="email" name="email" required placeholder="Enter your email"><br />
+            <label id="number-label" for="number">Number</label>
+            <input id="number" type="number" name="number" min="1" max="10" required placeholder="Enter your number"><br />
+            <label for="dropdown">Select Country</label><select id="dropdown">
+                <option selected disabled> country</option>
+                <option> Egypt</option>
+                <option> Nigeria</option>
 
-        </select><br />
+            </select><br />
+        </div>        <div id="genderDiv">
+                     <h3>Gender</h3>
+                     <input type="radio" name="gender" value="male" id="maleButton" />
+                     <label for="maleButton">Male</label><br />
+                     <input type="radio" name="gender" value="female" id="femaleButton" />
+                     <label for="femaleButton">Female</label>
 
-        <input type="radio" name="gender" value="male" id="maleButton" />
-        <label for="maleButton">Male</label><br />
-        <input type="radio" name="gender" value="female" id="femaleButton" />
-        <label for="femaleButton">Female</label>
-
-        <br />
-
-        <input type="checkbox" name="book1" value="Mathematics" id="book1" />
-        <label for="book1">Mathematics</label><br />
-        <input type="checkbox" name="book2" value="Biology" id="book2" />
-        <label for="book2">Biology</label><br />
-        <input type="checkbox" name="book3" value="Chemistry" id="book3" />
-        <label for="book3">Chemistry</label><br/>
-        
+                     <br />
+                 </div>
+                 <div id="checkboxDiv">
+                     <h3>Book</h3>
+                     <input type="checkbox" name="book1" value="Mathematics" id="book1" />
+                     <label for="book1">Mathematics</label><br />
+                     <input type="checkbox" name="book2" value="Biology" id="book2" />
+                     <label for="book2">Biology</label><br />
+                     <input type="checkbox" name="book3" value="Chemistry" id="book3" />
+                     <label for="book3">Chemistry</label><br />
+                 </div>
         <label for="textarea"> additional comments</label>
         <textarea id="textarea" name="comments">
             
